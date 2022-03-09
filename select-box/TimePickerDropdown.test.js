@@ -7,6 +7,10 @@ const {
 } = require("./TimePickerDropdown");
 
 describe("hourMinuteToMinutes", () => {
+  it("should convert minutes to minutes", () => {
+    expect(hourMinuteToMinutes({ hours: 0, minutes: 5 })).toEqual(5);
+  });
+
   it("should convert HourMinute objects to minutes", () => {
     expect(hourMinuteToMinutes({ hours: 2, minutes: 20 })).toEqual(140);
   });
