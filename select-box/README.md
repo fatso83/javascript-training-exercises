@@ -14,7 +14,7 @@ and end (inclusive), split into intervals of `duration` minutes.
 
 ```
 git clone https://github.com/fatso83/javascript-training-exercises
-cd select-box
+cd javascript-training-exercises/select-box
 npm install
 npm test
 code ./TimePickerDropdown.js
