@@ -4,7 +4,7 @@
  * A complex type to represent hours and minutes exactly without needing to parse it
  * @typedef {Object} HourMinute
  * @param {number} hours
- * @param {number} minute
+ * @param {number} minutes
  */
 
 /**
