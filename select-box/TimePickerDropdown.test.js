@@ -22,6 +22,12 @@ describe("zeroPad", () => {
   });
 });
 
+describe("timeStringToHourMinute", () => {
+  it("should convert from string to object representation", () => {
+    expect(timeStringToHourMinute("11:22")).toEqual({ hours: 11, minutes: 22 });
+  });
+});
+
 describe("hourMinuteToTimeString", () => {
   it("should convert from object to string representation", () => {
     expect(hourMinuteToTimeString({ hours: 11, minutes: 22 })).toEqual("11:22");
@@ -31,12 +37,6 @@ describe("hourMinuteToTimeString", () => {
     expect(() =>
       hourMinuteToTimeString({ hours: 99, minutes: 11 })
     ).toThrowError(/Illegal value/);
-  });
-});
-
-describe("timeStringToHourMinute", () => {
-  it("should convert from string to object representation", () => {
-    expect(timeStringToHourMinute("11:22")).toEqual({ hours: 11, minutes: 22 });
   });
 });
 
