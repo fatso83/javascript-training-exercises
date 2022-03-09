@@ -7,18 +7,18 @@ const {
 } = require("./TimePickerDropdown");
 
 describe("hourMinuteToMinutes", () => {
-    it("should convert HourMinute objects to minutes", () => {
-        expect(hourMinuteToMinutes({hours:2, minutes:20})).toEqual(140)
-    })
-})
+  it("should convert HourMinute objects to minutes", () => {
+    expect(hourMinuteToMinutes({ hours: 2, minutes: 20 })).toEqual(140);
+  });
+});
 
 describe("zeroPad", () => {
   it("should not pad values >= 10", () => {
     expect(zeroPad(11)).toEqual("11");
   });
 
-  it("should pad values > 10", () => {
-    expect(zeroPad(11)).toEqual("11");
+  it("should pad values < 10", () => {
+    expect(zeroPad(8)).toEqual("08");
   });
 });
 
